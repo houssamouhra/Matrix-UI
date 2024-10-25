@@ -1,7 +1,37 @@
+@font-face{
+    src: url(texgyrecursor-regular.otf);
+    font-family: myFont;
+}
+
 body {
     margin: 0;
     overflow: hidden;
     background-color: black;
+}
+
+h1 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top : 50%;
+    left: 50%;
+    font-family: myFont;
+    font-size: 27px;
+    color: white;    ;
+    text-shadow: 
+    0 0 5px #fff,  
+    0 0 10px #fff,
+    0 0 15px #00bb00, 
+    0 0 20px #00bb00, 
+    0 0 25px #00bb00;
+    z-index: 1000;
+    overflow: hidden; 
+    opacity: 1; 
+    border-right: .12em solid white; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: 0; 
+    animation: typing 1s steps(10), blink-caret .75s step-end infinite,
+    fadeOut 3s 2s forwards; 
 }
 
 canvas {
@@ -10,3 +40,34 @@ canvas {
     top: 0;
     left: 0;
 }
+
+@keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+
+/* Typing animation */
+@keyframes typing {
+from {
+    width: 0;
+}
+to {
+    width: 13%; /* Adjust this value to the length of the text */
+}
+}
+
+/* Cursor blinking effect */
+@keyframes blink-caret {
+from, to {
+    border-color: transparent;
+}
+30% {
+    border-color: white; /* Cursor color */
+}
+}
+
